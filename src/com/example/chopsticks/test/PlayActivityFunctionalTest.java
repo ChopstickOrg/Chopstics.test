@@ -13,8 +13,8 @@ import android.widget.TextView;
 import com.example.chopsticks.MainActivity;
 import com.example.chopsticks.PlayActivity;
 import com.example.chopsticks.SendActivity;
-
 import com.example.chopsticks.R;
+import com.example.staticdata.StaticData;
 
 public class PlayActivityFunctionalTest extends
 		ActivityInstrumentationTestCase2<PlayActivity> {
@@ -134,7 +134,7 @@ public class PlayActivityFunctionalTest extends
 
 	}
 	
-	public void testBet5Button() throws Exception {
+	public void testBet5ButtonPath1() throws Exception {
 
 		PlayActivity activity = getActivity();
 
@@ -154,6 +154,28 @@ public class PlayActivityFunctionalTest extends
 	
 
 	}
+	//
+	public void testBet5ButtonPath2() throws Exception {
+		StaticData.balance = (float) 3;
+		PlayActivity activity = getActivity();
+
+		// search for the textView
+		final ImageButton button = (ImageButton) activity
+				.findViewById(R.id.five);
+
+		// set text
+		getActivity().runOnUiThread(new Runnable() {
+
+			@Override
+			public void run() {
+				button.performClick();
+			}
+		});
+
+	
+
+	}
+	
 	
 	public void testBet10Button() throws Exception {
 

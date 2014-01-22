@@ -41,7 +41,8 @@ public class PlayActivityUnitTest extends ActivityUnitTestCase<PlayActivity> {
 	 * dice1 click listener tests
 	 */
 	
-	//test for Static.Balance >= 1
+	//test for Static.Balance >= 1 and (touchable == view && touchable.isPressed())
+	//path = [220, 223, 224, 225, 226-228, 224, 223]
 	public void testDice1ClickListnerPath1() {
 		
 		StaticData.balance = (float) 10.0;
@@ -81,7 +82,19 @@ public class PlayActivityUnitTest extends ActivityUnitTestCase<PlayActivity> {
 	}
 	
 	//test for Static.Balance < 1
+	//path = [220, 233]
 	public void testDice1ClickListnerPath2(){
+		StaticData.balance = (float) 0.5;
+		ImageView dice = (ImageView) activity.findViewById(R.id.imageViewrollingdiceOne);
+		dice.performClick();
+		//button should be still enable
+		assertTrue("Dice1 is disabled", dice.isEnabled());
+		
+	}
+	
+	//test for Static.Balance >=1 and !(touchable == view && touchable.isPressed())
+	//path = [220, 223, 224, 225, 224, 223]
+	public void testDice1ClickListnerPath3(){
 		StaticData.balance = (float) 0.5;
 		ImageView dice = (ImageView) activity.findViewById(R.id.imageViewrollingdiceOne);
 		dice.performClick();
