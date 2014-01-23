@@ -104,6 +104,10 @@ public class PlayActivityUnitTest extends ActivityUnitTestCase<PlayActivity> {
 
 	}
 	
+	/**
+	 * bet1 Click Listener tests
+	 */
+	
 	// test for StaticData.balance < 1
 	// path = [407, 411]
 	public void testBet1ClickListner() {
@@ -116,6 +120,9 @@ public class PlayActivityUnitTest extends ActivityUnitTestCase<PlayActivity> {
 
 	}
 	
+	/**
+	 * bet2 Click Listener tests
+	 */
 	// test for StaticData.balance <2
 	// path = [474, 522-523]
 	public void testBet2ClickListnerPath1() {
@@ -160,6 +167,10 @@ public class PlayActivityUnitTest extends ActivityUnitTestCase<PlayActivity> {
 		assertFalse("button5 is disabled", button5.isEnabled());
 	}
 
+	/**
+	 * bet5 Click Listener tests
+	 * @throws InterruptedException
+	 */
 	// test for StaticData.balance < 5
 	// path = [536, 582-585]
 	public void testBet5ClickListnerPath1() throws InterruptedException {
@@ -203,6 +214,10 @@ public class PlayActivityUnitTest extends ActivityUnitTestCase<PlayActivity> {
 		assertFalse("button5 is disabled", button5.isEnabled());
 	}
 
+	/**
+	 * bet10 Click Listener tests
+	 * @throws InterruptedException
+	 */
 	// test for StaticData.balance < 10
 	// path = [593, 645]
 	public void testBet10ClickListnerPath1() throws InterruptedException {
@@ -246,6 +261,10 @@ public class PlayActivityUnitTest extends ActivityUnitTestCase<PlayActivity> {
 		assertFalse("button5 is disabled", button5.isEnabled());
 	}
 
+	/**
+	 * bet20 Click Listener tests
+	 * @throws InterruptedException
+	 */
 	// test for StaticData.balance < 20
 	// path = [650, 699-700]
 	public void testBet20ClickListnerPath1() throws InterruptedException {
@@ -289,6 +308,9 @@ public class PlayActivityUnitTest extends ActivityUnitTestCase<PlayActivity> {
 		assertFalse("button5 is disabled", button5.isEnabled());
 	}
 
+	/*
+	 * bet50 Click Listener tests
+	 */
 	// test for StaticData.balance < 50
 	// path = [707, 754-755]
 	public void testBet50ClickListnerPath1() throws InterruptedException {
